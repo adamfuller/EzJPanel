@@ -234,7 +234,6 @@ public abstract class EzJPanel extends JPanel implements MouseListener, MouseMot
             this.draw(g);
 
             if (this.shouldLoop){
-                System.out.println("Repainting");
                 repaint();
             }
 
