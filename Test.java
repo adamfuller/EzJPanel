@@ -11,7 +11,7 @@ public class Test extends EzJPanel{
     @Override
     protected void setup(){
         stopLooping();
-        rename("HHHHHHH");
+        rename("Test");
     }
 
     public Test(int width, int height, String title){
@@ -25,7 +25,7 @@ public class Test extends EzJPanel{
     protected void draw(Graphics g){
 
         g.setColor(color);
-        g.fillRect(50, 50, 100, 100);
+        g.fillRect(25, 25, 100, 100);
     }
 
 }
