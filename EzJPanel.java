@@ -220,6 +220,10 @@ public abstract class EzJPanel extends JPanel implements MouseListener, MouseMot
         return this.backgroundColor;
     }
 
+    public void setBackgroundColor(Color color){
+        this.backgroundColor = color;
+    }
+
     /*
         Add all painting/rendering functions to this
         section
@@ -234,6 +238,7 @@ public abstract class EzJPanel extends JPanel implements MouseListener, MouseMot
             this.draw(g);
 
             if (this.shouldLoop){
+                g.dispose();
                 repaint();
             }
 
@@ -243,12 +248,11 @@ public abstract class EzJPanel extends JPanel implements MouseListener, MouseMot
             }
         }
         
-        
     }
 
     // key press listener
     public void keyPressed(KeyEvent e){
-        /*  keyMap.indexOf(e.getKeycode())
+        /*  keyMap.indexOf(e.getKeyCode())
             37 - left
             38 - up
             39 - right
